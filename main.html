@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css" class="css">
+        <title>Portfolio | Felipe Silva</title>
+    </head>
+    <script>
+        function onChangeCategory(myId, myBtn, myLabel){
+            Array.from(document.querySelectorAll('#center-bar')).forEach((el) => 
+                el.classList.remove('active')
+            );
+            Array.from(document.querySelectorAll('#right-button-menu')).forEach((el) => 
+                el.classList.remove('active')
+            );
+
+            document.querySelector('.center-' + myId).classList.add('active');
+            document.querySelector('.NumCatPage').innerHTML = '0' + myId
+            document.querySelector('.NameCatPage').innerHTML = myLabel
+            myBtn.classList.add('active');
+        }
+        function onTooltipSkills(myType, myId){
+            let myTooltip = [
+                {desc: "HTML 5<br> Como já tinha uma pequena noção antes dos estudos, então essa foi a mais simples de entender seus fundamentos."},
+                {desc: "CSS 3<br> Estudando CSS que vi o quanto ele é essencial e importante para uma página. É, sem dúvidas, a linguagem que mais gosto."},
+                {desc: "JavaScript<br> Como eu já tenho uma noção de Lógica de Programação, isso me ajuda em JavaScript. Preciso agora aprender suas sintaxe."},
+                {desc: "Typescript<br> Estudo ainda em progresso."},
+                {desc: "Boostrap<br> Estudo ainda em progresso."},
+                {desc: "React<br> Estudo ainda em progresso."},
+            ]
+            
+            if (myType == 01) {
+                document.querySelector('.tooltip-skill').innerHTML = myTooltip[myId].desc
+            } else {
+                var width = screen.width;
+                if (width >= 500) {
+                    document.querySelector('.tooltip-skill').innerHTML = 'Posicione o mouse sobre o ícone para ver mais detalhes.'
+                }
+            }
+        }
+    </script>
+    <body>
+        <header>
+            <nav>
+                <a href="#" id="title-site">
+                    <h2>FELIPE S .//</h2>
+                </a>
+                <div class="social-media">
+                    <a href="https://github.com/Frenesy" class="github" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/felipe-da-silva-oliveira-420525192/" class="linkedin" target="_blank"></a>
+                    <a href="https://www.facebook.com/FilipeSilvaTJ" class="facebook" target="_blank"></a>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="style-1">
+                <div class="left-bar">
+                    <h1 class="NumCatPage">01</h1>
+                    <div class="sep-ver"></div>
+                    <h2 class="NameCatPage" style="text-align: right">Introduction</h2>
+                </div>
+
+                <div id="center-bar" class="center-1 active">
+                    <h2>Eu me chamo <span style="color: white">FELIPE</span>, tenho 29 anos e dês de 2011 trabalho com programação. Primeiro começei com programação .lua voltada para jogos. Criava e modificava jogos nessa linguagem. Em 2018 eu começei a desenvolver <span style="color: rgb(182, 182, 182)">sistemas completos usando Excel VBA</span>. Criei diversos sistemas para vários setores diferentes, como Recursos Humanos (controle de atestado, advertência, suspensão, faltas e afins), Almoxarifado (Entrada e saída de equipamentos e relatórios diários e mensais), Controle de Combustível e muitos outros. <br><br>
+                    
+                    Agora, dês de Junho de 2022 eu comecei a me especializar em Front-End, estudando HTML5, CSS3 e JavaScript. Meus planos para o futuro é desenvolver <span style="color: rgb(182, 182, 182)">Sistemas para a Web completos e aplicativos para dispositos móveis </span>, para que o que eu criava em Excel pudesse ser recriado diretamente na rede, sendo acessado em qualquer lugar com internet.
+                    </h2>
+                    <div class="estatisticas">
+                        <div class="box-info">
+                            <h1>01</h1>
+                            <h3>Trabalhos<br> finalizados</h3>
+                        </div>
+                        <div class="box-info">
+                            <h1>01</h1>
+                            <h3>Meses de<br> estudo</h3>
+                        </div>
+                        <div class="box-info">
+                            <h1>01</h1>
+                            <h3>Cursos<br> concluidos</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="center-bar" class="center-2">
+                    <div class="grid-skills">
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/html.png" onmousemove="onTooltipSkills(01, 00)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/css.png" onmousemove="onTooltipSkills(01, 01)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/javascript.png" onmousemove="onTooltipSkills(01, 02)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/typescript.png" onmousemove="onTooltipSkills(01, 03)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>TypeScript</h3>
+                        </div>
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/bootstrap.png" onmousemove="onTooltipSkills(01, 04)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>Boostrap</h3>
+                        </div>
+                        <div class="box-skills">
+                            <a href="#tooltip-skill">
+                                <img src="_img/react.png" onmousemove="onTooltipSkills(01, 05)" onmouseout="onTooltipSkills(00)">
+                            </a>
+                            <h3>React</h3>
+                        </div>
+                    </div>
+                    <div id="tooltip-skill" class="tooltip-skill">Posicione o mouse sobre o ícone para ver mais detalhes.</div>
+                </div>
+
+                <div id="center-bar" class="center-3">
+                    <div class="project" id="project">
+                        <div class="work-card">
+                            <img src="_img/no-image.png" alt="">
+                            <h2>Nenhum Projeto</h2>
+                        </div>
+                        <div class="work-card">
+                            <img src="_img/no-image.png" alt="">
+                            <h2>Nenhum Projeto</h2>
+                        </div>
+                        <div class="work-card">
+                            <img src="_img/no-image.png" alt="">
+                            <h2>Nenhum Projeto</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-bar" id="right-bar">
+                    <img src="_img/intro.png" id="right-button-menu" class="active" onclick="onChangeCategory(1, this, 'Introduction')">
+                    <img src="_img/skills.png" id="right-button-menu" onclick="onChangeCategory(2, this, 'Skills')">
+                    <img src="_img/work.png" id="right-button-menu" onclick="onChangeCategory(3, this, 'Project')">
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;1,600&family=El+Messiri:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: url('../_img/background-img.png') no-repeat scroll;
+    font-family: 'Bai Jamjuree';
+    background-size: cover;
+}
+
+@media screen and (min-width: 1280px) {
+    header nav {
+        width: 1280px;
+    }
+    main {
+        width: 1280px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1170px) {
+    main div.center-3 div#project {
+        grid-template-columns: 270px 270px;
+    }
+}
+@media screen and (max-width: 980px) {
+    main div#center-bar h2 {
+        height: fill;
+    }
+    main div#center-bar div.estatisticas div.box-info {
+        display: block;
+        margin-bottom: 20px;
+    }
+    main div#center-bar div.estatisticas div.box-info h1 {
+        font-size: 500%;
+    }
+    main div#center-bar div.estatisticas div.box-info h3 {
+        text-align: center;
+        padding: 0px;
+    }
+
+    main div.style-1 div.center-2 div.grid-skills {
+        grid-template-columns: 150px 150px;
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 900px) {
+    main div#center-bar div.estatisticas div.box-info h1 {
+        text-align: center;
+        font-size: 300%;
+    }
+    main div.style-1 div.center-2 div.grid-skills {
+        gap: 10px;
+    }
+    main div.center-2 div#tooltip-skill {
+        height: 110px;
+    }
+}
+@media screen and (max-width: 890px) {
+    main div.center-3 div#project {
+        grid-template-columns: 270px;
+    }
+}
+@media screen and (max-width: 850px) {
+    main div#center-bar div.estatisticas div.box-info h1 {
+        text-align: center;
+        font-size: 200%;
+    }
+    main div#right-bar {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 135px;
+        margin-top: -5px;
+        right: 0px;
+        flex-direction: row;
+    }
+    main div.style-1 div#center-bar h2 {
+        padding: 20px;
+    }
+
+    main div#right-bar img {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    main div.center-2 div#tooltip-skill {
+        height: 125px;
+    }
+
+    main div.center-3 div#project {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    main div.style-1 div.left-bar {
+        margin-left: 30px;
+    }
+    header nav a#title-site {
+        padding: 0px;
+        margin: 0px 30px;
+    }
+    main div.center-2 div#tooltip-skill {
+        height: 130px;
+    }
+}
+@media screen and (max-width: 565px) {
+    main div.style-1 div.left-bar {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    main div.style-1 div.left-bar h1.NumCatPage {
+        font-size: 50px;
+        margin-left: 10px;
+    }
+    header nav a#title-site {
+        padding: 0px;
+        margin: 0px 10px;
+    }
+}
+@media screen and (max-width: 500px) {
+    main div.center-2 div#tooltip-skill {
+        border-left: 15px solid orange;
+        padding-left: 60px;
+        margin-left: -80px;
+    }
+    main div.style-1 div.center-2 div.grid-skills {
+        grid-template-columns: 250px;
+        gap: 50px;
+        margin-top: 50px;
+    }
+    main div.style-1 div.center-2 div.grid-skills img {
+        width: 128px;
+    }
+}
+
+/* CABEÇALHO */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    margin: auto;
+    margin-top: 30px;
+}
+    header nav a {
+        text-decoration: none;
+        font-family: 'El Messiri';
+        font-size: 20px;
+        color: white;
+        margin: 0px 100px;
+    }
+    header nav div.social-media {
+        display: flex;
+        margin: 14px 30px;
+    }
+        header nav div.social-media a.github {
+            background: url('../_img/github.png') no-repeat 8px 7px;
+            width: 45px;
+            height: 45px;
+            margin: 0px 5px;
+            cursor: pointer;
+            background-size: 27px 27px;
+            transition: .5s;
+            border-radius: 50%;
+            border: 1px solid orange;
+            padding: 10px;
+            filter: grayscale(100%) brightness(.5);
+        }
+        header nav div.social-media a.linkedin {
+            background: url('../_img/linkedin.png') no-repeat 11px 9px;
+            width: 45px;
+            height: 45px;
+            margin: 0px 5px;
+            cursor: pointer;
+            background-size: 22px 22px;
+            transition: .5s;
+            border-radius: 50%;
+            border: 1px solid orange;
+            padding: 10px;
+            filter: grayscale(100%) brightness(.5);
+        }
+        header nav div.social-media a.facebook {
+            background: url('../_img/facebook.png') no-repeat 10px 10px;
+            width: 45px;
+            height: 45px;
+            margin: 0px 5px;
+            cursor: pointer;
+            background-size: 22px 22px;
+            transition: .5s;
+            border-radius: 50%;
+            border: 1px solid orange;
+            padding: 10px;
+            filter: grayscale(100%) brightness(.5);
+        }
+        header nav div.social-media a:hover {
+            filter: grayscale(0%) brightness(1);
+        }
+
+main div.style-1 {
+    display: flex;
+}
+    main div.left-bar {
+        width: 100px;
+        height: fill;
+        margin: 55px 50px 0px 100px;
+    }
+        main div.left-bar h1 {
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 5px;
+            color: gray;
+            margin-left: -15px;
+        }
+        main div.left-bar div.sep-ver {
+            width: 3px;
+            height: 100px;
+            background-color: white;
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+        main div.left-bar h2 {
+            color: gray;
+            transform: rotate(-90deg);
+            margin-top: 100px
+        }
+        
+    main div#center-bar {
+        display: none;
+        width: 850px;
+        height: fill;
+        margin: 55px 0px;
+    }
+    main div#center-bar div.estatisticas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 25px;
+    }
+        main div#center-bar div.estatisticas .box-info {
+            display: flex;
+        }
+        main div#center-bar div.estatisticas .box-info h1 {
+            color: orange;
+        }
+        main div#center-bar div.estatisticas .box-info h3 {
+            color: white;
+            font-size: 15px;
+            padding: 30px 10px;
+        }
+    main div#center-bar.active {
+        display: block;
+    }
+        main div#center-bar h1 {
+            font-size: 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white;
+        }
+        main div#center-bar div.sep-hor {
+            width: 70px;
+            height: 3px;
+            background-color: white;
+            margin-top: 5px;
+            margin-bottom: 20px
+        }
+        main div#center-bar h2 {
+            font-size: 15px;
+            color: gray;
+            text-align: justify;
+        }
+
+main div.right-bar {
+    position: relative;
+    right: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 50px 0px 50px;
+}
+    main div.right-bar img.active {
+        filter: grayscale(0%) brightness(1);
+    }
+    main div.right-bar img {
+        width: 45px;
+        height: 45px;
+        margin-top: 15px;
+        transition: .5s;
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid orange;
+        filter: grayscale(100%) brightness(.5);
+    }
+    main div.right-bar img:hover {
+        filter: grayscale(0%) brightness(1);
+    }
+
+main div.center-2 div.grid-skills {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+    main div.center-2 div.grid-skills img {
+        width: 80px;
+        transition: .5s;
+        filter: grayscale(100%) brightness(.5);
+        cursor: help;
+    }
+    main div.center-2 div.grid-skills h3 {
+        padding-top: 10px;
+    }
+    main div.center-2 div.grid-skills img:hover {
+        filter: grayscale(100%) brightness(1);
+    }
+    main div.center-2 div.tooltip-skill {
+        width: 100%px;
+        height: 90px;
+        margin-top: 40px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
+
+main div.center-3 div.project {
+    display: grid;
+    grid-template-columns: 270px 270px 270px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+    main div.center-3 div.work-card {
+        width: 270px;
+        height: 350px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        transition: .5s;
+        cursor: pointer;
+        opacity: .7;
+    }
+    main div.center-3 div.work-card:hover {
+        transform: scale(1.03);
+        opacity: 1;
+    }
+        main div.center-3 div.project div.work-card img {
+            border-radius: 10px 10px 0px 0px;
+            width: 270px;
+            height: 310px;
+        }
+        main div.center-3 div.project div.work-card h2 {
+            padding-top: 10px;
+            color: white;
+        }
