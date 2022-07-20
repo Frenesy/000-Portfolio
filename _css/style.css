@@ -9,6 +9,7 @@
 
 body {
     background: url('../_img/background-img.png') no-repeat;
+    background-size: cover;
     font-family: 'Bai Jamjuree';
 }
 
@@ -193,7 +194,7 @@ header nav div.social-media a.github {
     border-radius: 50%;
     border: 1px solid orange;
     padding: 10px;
-    background: url('../_img/github.png') no-repeat 8px 7px;
+    background: url('../_img/github.png') no-repeat 6px 7px;
     filter: grayscale(100%) brightness(.5);
 }
 
