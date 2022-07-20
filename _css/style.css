@@ -456,7 +456,7 @@ main div.center-3 div.project div.work-card div#tool-desc:hover {
     opacity: 1;
 }
 
-main div.center-3 div.project div.work-card div#tool-desc button#git-btn {
+a#git-btn {
     height: 55px;
     width: 55px;
     margin-top: -150px;
@@ -466,7 +466,7 @@ main div.center-3 div.project div.work-card div#tool-desc button#git-btn {
     background-color: black;
     cursor: pointer;
 }
-main div.center-3 div.project div.work-card div#tool-desc button#live-btn {
+a#live-btn {
     height: 55px;
     width: 55px;
     margin-top: -150px;
