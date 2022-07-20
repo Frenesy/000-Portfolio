@@ -21,7 +21,7 @@
             document.querySelector('.NameCatPage').innerHTML = myLabel
             myBtn.classList.add('active');
         }
-        function onTooltipSkills(myType, myId){
+        function onTooltip(myType, myId){
             let myTooltip = [
                 {desc: "HTML 5<br> Como já tinha uma pequena noção antes dos estudos, então essa foi a mais simples de entender seus fundamentos."},
                 {desc: "CSS 3<br> Estudando CSS que vi o quanto ele é essencial e importante para uma página. É, sem dúvidas, a linguagem que mais gosto."},
@@ -33,12 +33,19 @@
             
             if (myType == 01) {
                 document.querySelector('.tooltip-skill').innerHTML = myTooltip[myId].desc
-            } else {
+            } else  if (myType == 00) {
                 var width = screen.width;
                 if (width >= 500) {
                     document.querySelector('.tooltip-skill').innerHTML = 'Posicione o mouse sobre o ícone para ver mais detalhes.'
                 }
+            } else  if (myType == 02) {
+                Array.from(document.querySelectorAll('#tool-desc')).forEach((el) => 
+                    el.classList.remove('active')
+                );
+
+                document.querySelector('#tool-desc').classList.add('active');
             }
+
         }
     </script>
     <body>
@@ -88,37 +95,37 @@
                     <div class="grid-skills">
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/html.png" onmousemove="onTooltipSkills(01, 00)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/html.png" onmousemove="onTooltip(01, 00)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>HTML</h3>
                         </div>
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/css.png" onmousemove="onTooltipSkills(01, 01)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/css.png" onmousemove="onTooltip(01, 01)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>CSS</h3>
                         </div>
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/javascript.png" onmousemove="onTooltipSkills(01, 02)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/javascript.png" onmousemove="onTooltip(01, 02)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>JavaScript</h3>
                         </div>
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/typescript.png" onmousemove="onTooltipSkills(01, 03)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/typescript.png" onmousemove="onTooltip(01, 03)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>TypeScript</h3>
                         </div>
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/bootstrap.png" onmousemove="onTooltipSkills(01, 04)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/bootstrap.png" onmousemove="onTooltip(01, 04)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>Boostrap</h3>
                         </div>
                         <div class="box-skills">
                             <a href="#click-target">
-                                <img src="_img/react.png" onmousemove="onTooltipSkills(01, 05)" onmouseout="onTooltipSkills(00)">
+                                <img src="_img/react.png" onmousemove="onTooltip(01, 05)" onmouseout="onTooltip(00)">
                             </a>
                             <h3>React</h3>
                         </div>
@@ -130,28 +137,68 @@
                 <div id="center-bar" class="center-3">
                     <div class="project" id="project">
                         <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
+                            <div id="tool-desc">
+                                <button id="git-btn"></button>
+                                <button id="live-btn"></button>
+                                <div class="desc">O objetivo era aprender como estilizar a página com CSS, entender suas funções e aplicá-las. Foi uma ótima prática.</div>
+                                <div class="tag-css">
+                                    <h3>CSS</h3>
+                                    <div class="tag-version">3.0</div>
+                                </div>
+                                <div class="tag-html">
+                                    <h3>HTML</h3>
+                                    <div class="tag-version">5.0</div>
+                                </div>
+                            </div>
+                            <div class="grid-view">
+                                <div id="site-view-1"></div>
+                                <h2 id="title-site">001 - Login Simples</h2>
+                                <h3 id="desc-site">Meu primeiro projeto. Uma simples página de login centralizada.</h3>
+                            </div>
                         </div>
                         <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
+                            <div id="tool-desc">
+                                <button id="git-btn"></button>
+                                <button id="live-btn"></button>
+                                <div class="desc">Usei uma imagem de layout como referência. O plano é fazer o máximo para seguir o layout a risca e treinar minha capacidade de seguir um layout pré-definido.</div>
+                                <div class="tag-css">
+                                    <h3>CSS</h3>
+                                    <div class="tag-version">3.0</div>
+                                </div>
+                                <div class="tag-html">
+                                    <h3>HTML</h3>
+                                    <div class="tag-version">5.0</div>
+                                </div>
+                            </div>
+                            <div class="grid-view">
+                                <div id="site-view-2"></div>
+                                <h2 id="title-site">002 - Login Infinity</h2>
+                                <h3 id="desc-site">Ainda no campo do Login, minha tentativa de fazer algo mais moderno.</h3>
+                            </div>
                         </div>
                         <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
-                        </div>
-                        <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
-                        </div>
-                        <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
-                        </div>
-                        <div class="work-card">
-                            <img src="_img/no-image.png" alt="">
-                            <h2>Nenhum Projeto</h2>
+                            <div id="tool-desc">
+                                <button id="git-btn"></button>
+                                <button id="live-btn"></button>
+                                <div class="desc">Usei diversas pequenas imagens de layout de páginas e tentei seguir a risca cada uma delas. Cada página tem sua estilização e funções. Também usei JavaScript e localStorage para adicionar um botão de modo noturno.</div>
+                                <div class="tag-css">
+                                    <h3>CSS</h3>
+                                    <div class="tag-version">3.0</div>
+                                </div>
+                                <div class="tag-html">
+                                    <h3>HTML</h3>
+                                    <div class="tag-version">5.0</div>
+                                </div>
+                                <div class="tag-js">
+                                    <h3>JS</h3>
+                                    <div class="tag-version">0.0</div>
+                                </div>
+                            </div>
+                            <div class="grid-view">
+                                <div id="site-view-3"></div>
+                                <h2 id="title-site">003 - Page Master</h2>
+                                <h3 id="desc-site">Melhorando minha habilidade de criar diversos layouts.</h3>
+                            </div>
                         </div>
                     </div>
                 </div>

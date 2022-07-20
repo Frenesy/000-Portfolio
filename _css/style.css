@@ -26,7 +26,7 @@ body {
 
 @media screen and (max-width: 1170px) {
     main div.center-3 div#project {
-        grid-template-columns: 270px 270px;
+        grid-template-columns: 250px 250px;
     }
 }
 
@@ -72,7 +72,7 @@ body {
 
 @media screen and (max-width: 890px) {
     main div.center-3 div#project {
-        grid-template-columns: 270px;
+        grid-template-columns: 250px;
     }
 }
 
@@ -86,9 +86,9 @@ body {
         position: absolute;
         justify-content: center;
         align-items: center;
-        width: 135px;
-        margin-top: -5px;
-        right: 0px;
+        width: fit-content;
+        top: 15px;
+        right: -15px;
         flex-direction: row;
     }
 
@@ -106,8 +106,7 @@ body {
     }
 
     main div.center-3 div#project {
-        margin-top: 30px;
-        margin-right: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -317,10 +316,10 @@ main div#center-bar h2 {
 main div.right-bar {
     position: relative;
     right: 10px;
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     margin: 80px 50px 0px 50px;
+    height: fit-content;
 }
 
 main div.right-bar img.active {
@@ -380,14 +379,14 @@ main div.center-2 div.tooltip-skill {
 
 main div.center-3 div.project {
     display: grid;
-    grid-template-columns: 270px 270px 270px;
+    grid-template-columns: 260px 260px 260px;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
 main div.center-3 div.work-card {
-    width: 270px;
+    width: 250px;
     height: 350px;
     border-radius: 10px;
     display: flex;
@@ -395,7 +394,6 @@ main div.center-3 div.work-card {
     align-items: center;
     background-color: white;
     transition: .5s;
-    cursor: pointer;
     opacity: .7;
 }
 
@@ -404,13 +402,139 @@ main div.center-3 div.work-card:hover {
     opacity: 1;
 }
 
-main div.center-3 div.project div.work-card img {
+main div.center-3 div.project div.work-card div#site-view-1 {
     border-radius: 10px 10px 0px 0px;
-    width: 270px;
-    height: 310px;
+    background: url('../_img/work-1.png') no-repeat -95px;
+    background-size: cover;
+    width: 250px;
+    height: 210px;
 }
 
-main div.center-3 div.project div.work-card h2 {
-    padding-top: 10px;
+main div.center-3 div.project div.work-card div#site-view-2 {
+    border-radius: 10px 10px 0px 0px;
+    background: url('../_img/work-2.png') no-repeat -30px;
+    background-size: cover;
+    width: 250px;
+    height: 210px;
+}
+
+main div.center-3 div.project div.work-card div#site-view-3 {
+    border-radius: 10px 10px 0px 0px;
+    background: url('../_img/work-3.png') no-repeat -50px;
+    background-size: cover;
+    width: 250px;
+    height: 210px;
+}
+
+main div.center-3 div.project div.work-card h2#title-site {
+    padding: 10px;
+    color: gray;
+    text-align: center;
+}
+main div.center-3 div.project div.work-card h3#desc-site {
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+}
+
+main div.center-3 div.project div.work-card div#tool-desc {
+    opacity: 0;
+    position: absolute;
+    height: 350px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.757);
+    border-radius: 10px;
+    transition: .5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main div.center-3 div.project div.work-card div#tool-desc:hover {
+    opacity: 1;
+}
+
+main div.center-3 div.project div.work-card div#tool-desc button#git-btn {
+    height: 55px;
+    width: 55px;
+    margin-top: -150px;
+    border-radius: 50%;
+    border: none;
+    background: url(../_img/github.png) no-repeat 12px 11px;
+    background-color: black;
+    cursor: pointer;
+}
+main div.center-3 div.project div.work-card div#tool-desc button#live-btn {
+    height: 55px;
+    width: 55px;
+    margin-top: -150px;
+    border-radius: 50%;
+    border: none;
+    background: url(../_img/internet.png) no-repeat 12px 11px;
+    background-color: black;
+    cursor: pointer;
+}
+
+main div.center-3 div.project div.work-card div#tool-desc div.desc {
+    position: absolute;
     color: white;
+    font-size: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+main div.center-3 div.project div.work-card div#tool-desc div.tag-css {
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    height: 25px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: blue;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+}
+main div.center-3 div.project div.work-card div#tool-desc div.tag-html {
+    position: absolute;
+    bottom: 10px;
+    right: 85px;
+    height: 25px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: orangered;
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+}
+main div.center-3 div.project div.work-card div#tool-desc div.tag-js {
+    position: absolute;
+    bottom: 10px;
+    right: 165px;
+    height: 25px;
+    width: 75px;
+    border-radius: 5px;
+    background-color: rgb(202, 202, 4);
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+}
+main div.center-3 div.project div.work-card div#tool-desc div.tag-version {
+    height: 25px;
+    width: 30px;
+    position: absolute;
+    border-radius: 0px 5px 5px 0px;
+    right: 0px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
