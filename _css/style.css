@@ -1,540 +1,343 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;1,600&family=El+Messiri:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;1,600&family=El+Messiri:wght@700&display=swap");
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Bai Jamjuree";
+}
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
-    background: url('../_img/background-img.png') no-repeat;
-    background-size: cover;
-    font-family: 'Bai Jamjuree';
+    background-color: #2b2c2c;
 }
 
-@media screen and (min-width: 1280px) {
-    header nav {
-        width: 1280px;
-    }
-
-    main {
-        width: 1280px;
-        margin: auto;
-    }
+main {
+    width: 1200px;
+    margin: 0px auto;
 }
 
-@media screen and (max-width: 1170px) {
-    main div.center-3 div#project {
-        grid-template-columns: 250px 250px;
-    }
+#main-top {
+    height: 400px;
+    background-color: #2b2c2c;
 }
 
-@media screen and (max-width: 980px) {
-    main div#center-bar h2 {
-        height: fill;
-    }
-
-    main div#center-bar div.estatisticas div.box-info {
-        display: block;
-        margin-bottom: 20px;
-    }
-
-    main div#center-bar div.estatisticas div.box-info h1 {
-        font-size: 500%;
-    }
-
-    main div#center-bar div.estatisticas div.box-info h3 {
-        text-align: center;
-        padding: 0px;
-    }
-
-    main div.style-1 div.center-2 div.grid-skills {
-        grid-template-columns: 150px 150px;
-        gap: 30px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    main div#center-bar div.estatisticas div.box-info h1 {
-        text-align: center;
-        font-size: 300%;
-    }
-
-    main div.style-1 div.center-2 div.grid-skills {
-        gap: 10px;
-    }
-
-    main div.center-2 div#tooltip-skill {
-        height: 110px;
-    }
-}
-
-@media screen and (max-width: 890px) {
-    main div.center-3 div#project {
-        grid-template-columns: 250px;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    main div#center-bar div.estatisticas div.box-info h1 {
-        text-align: center;
-        font-size: 200%;
-    }
-
-    main div#right-bar {
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        top: 15px;
-        right: -15px;
-        flex-direction: row;
-    }
-
-    main div.style-1 div#center-bar h2 {
-        padding: 20px;
-    }
-
-    main div#right-bar img {
-        margin-top: 0px;
-        margin-left: 10px;
-    }
-
-    main div.center-2 div#tooltip-skill {
-        height: 125px;
-    }
-
-    main div.center-3 div#project {
-        margin-top: 15px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    main div.style-1 div.left-bar {
-        margin-left: 30px;
-    }
-
-    header nav a#title-site {
-        padding: 0px;
-        margin: 0px 30px;
-    }
-
-    main div.center-2 div#tooltip-skill {
-        height: 130px;
-    }
-}
-
-@media screen and (max-width: 565px) {
-    main div.style-1 div.left-bar {
-        margin-right: 5px;
-        margin-left: 5px;
-    }
-
-    main div.style-1 div.left-bar h1.NumCatPage {
-        font-size: 50px;
-        margin-left: 10px;
-    }
-
-    header nav a#title-site {
-        padding: 0px;
-        margin: 0px 10px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    main div.center-2 div#tooltip-skill {
-        border-left: 15px solid orange;
-        padding-left: 60px;
-        margin-left: -80px;
-    }
-
-    main div.style-1 div.center-2 div.grid-skills {
-        grid-template-columns: 250px;
-        gap: 50px;
-        margin-top: 50px;
-    }
-
-    main div.style-1 div.center-2 div.grid-skills img {
-        width: 128px;
-    }
-}
-
-/* CABEÇALHO */
-header nav {
+#main-top #presentation {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    margin: auto;
-    margin-top: 30px;
+    justify-content: center;
+    height: 400px;
+    overflow: hidden;
 }
 
-header nav a {
-    text-decoration: none;
-    font-family: 'El Messiri';
-    font-size: 20px;
+#main-top #presentation img {
+    height: 130%;
+}
+
+#main-top #presentation #my-name {
     color: white;
-    margin: 0px 100px;
+    margin: 80px;
 }
 
-header nav div.social-media {
+#main-top #presentation #my-name p {
+    font-size: calc(0.5em + 0.7vw);
+}
+
+#main-top #presentation #my-name h1 {
+    font-size: calc(1.8em + 1.8vw);
+}
+
+#main-top #presentation #my-name h4 {
+    font-size: calc(0.5em + 0.7vw);
+}
+
+#main-top #presentation #my-name .btn {
+    position: relative;
+    display: inline-block;
+    width: 230px;
+    margin-top: 30px;
+    padding: 12px 27px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: orange;
+    border: 2px solid orange;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+}
+
+#main-top #presentation #my-name .btn.btn-border::after,
+#main-top #presentation #my-name .btn.btn-border::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+#main-top #presentation #my-name .btn.btn-border::after {
+    top: -9px;
+    left: -9px;
+    border-top: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+#main-top #presentation #my-name .btn.btn-border::before {
+    bottom: -9px;
+    right: -9px;
+    border-bottom: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+#main-top #presentation #my-name .btn.btn-border:hover {
+    color: white;
+}
+
+#main-top #presentation #my-name .btn.btn-border:hover::after,
+#main-top #presentation #my-name .btn.btn-border:hover::before {
+    width: calc(100% + 15px);
+    height: calc(100% + 15px);
+    border-color: white;
+}
+
+#main-middle {
+    background-color: #303131;
+}
+
+#main-middle #about-me {
+    padding: 80px;
+    text-align: justify;
+    color: white;
+}
+
+#main-middle #about-me h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 3px solid orange;
+}
+
+#main-middle #about-me p {
+    font-size: calc(0.6em + 0.6vw);
+}
+
+#main-bottom {
+    height: 700px;
+    background-color: #2b2c2c;
+}
+
+#main-bottom #projects {
     display: flex;
-    margin: 14px 30px;
-}
-
-header nav div.social-media a.github {
-    width: 45px;
-    height: 45px;
-    margin: 0px 5px;
-    cursor: pointer;
-    background-size: 27px 27px;
-    transition: .5s;
-    border-radius: 50%;
-    border: 1px solid orange;
+    align-content: center;
+    justify-content: space-evenly;
     padding: 10px;
-    background: url('../_img/github.png') no-repeat 6px 7px;
-    filter: grayscale(100%) brightness(.5);
+    margin: 50px 0px 20px 0px;
 }
 
-header nav div.social-media a.linkedin {
-    background: url('../_img/linkedin.png') no-repeat 11px 9px;
-    width: 45px;
-    height: 45px;
-    margin: 0px 5px;
-    cursor: pointer;
-    background-size: 22px 22px;
-    transition: .5s;
-    border-radius: 50%;
-    border: 1px solid orange;
-    padding: 10px;
-    filter: grayscale(100%) brightness(.5);
-}
-
-header nav div.social-media a.facebook {
-    background: url('../_img/facebook.png') no-repeat 10px 10px;
-    width: 45px;
-    height: 45px;
-    margin: 0px 5px;
-    cursor: pointer;
-    background-size: 22px 22px;
-    transition: .5s;
-    border-radius: 50%;
-    border: 1px solid orange;
-    padding: 10px;
-    filter: grayscale(100%) brightness(.5);
-}
-
-header nav div.social-media a:hover {
-    filter: grayscale(0%) brightness(1);
-}
-
-main div.style-1 {
-    display: flex;
-}
-
-main div.left-bar {
-    width: 100px;
-    height: fill;
-    margin: 55px 50px 0px 100px;
-}
-
-main div.left-bar h1 {
-    font-size: 80px;
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 5px;
-    color: gray;
-    margin-left: -15px;
-}
-
-main div.left-bar div.sep-ver {
-    width: 3px;
-    height: 100px;
+#main-bottom #projects h4 {
     background-color: white;
-    margin-top: 15px;
-    margin-left: 50px;
-}
-
-main div.left-bar h2 {
     color: gray;
-    transform: rotate(-90deg);
-    margin-top: 100px
+    text-align: center;
+    border: none;
+    width: 23%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: calc(0.65em + 0.6vw);
+    font-weight: bold;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.6s;
+    background-size: 300%;
 }
 
-main div#center-bar {
-    display: none;
-    width: 850px;
-    height: fill;
-    margin: 55px 0px;
+#main-bottom #projects h4:hover {
+    color: #fff;
+    background-position: 100%;
 }
 
-main div#center-bar div.estatisticas {
+#main-bottom #projects .orange {
+    color: orange;
+    background-image: linear-gradient(120deg, white 50%, orange 50%);
+}
+
+#main-bottom #projects .active {
+    background-position: 100%;
+    color: white;
+    box-shadow: 0px 10px 20px -15px rgba(0, 0, 0, 0.75);
+}
+
+#main-bottom #show-content {
+    width: 100%;
+    height: 470px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 310px 310px 310px;
+    gap: 20px;
+    overflow: hidden;
+}
+
+#main-bottom #show-content .card-box {
+    position: relative;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0.5;
+    transition: 0.5s;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+}
+
+#main-bottom #show-content .card-box img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#main-bottom #show-content .card-box h3 {
+    height: 20px;
+    background-color: orange;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    margin: -10px 35px;
+    font-size: 15px;
+    color: white;
+    cursor: default;
+}
+
+#main-bottom #show-content .card-box p {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    cursor: default;
+}
+
+#main-bottom #show-content .card-box button {
+    position: absolute;
+    bottom: 0px;
+    width: 93%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: gray;
+    font-size: calc(0.7em + 0.7vw);
+}
+
+#main-bottom #show-content .card-box button:hover {
+    background-color: orange;
+}
+
+#main-bottom #show-content .card-box:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+#main-bottom #page-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#main-bottom #page-btn button {
+    width: 40px;
+    height: 40px;
+    font-weight: bolder;
+    border: none;
+    margin-left: 10px;
+    background-color: orange;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#main-bottom #page-btn button:hover {
+    background-color: rgb(194, 126, 0);
+}
+
+footer {
+    background-color: #303131;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: calc(0.3em + 0.4vw);
+}
+
+footer #social-media {
+    height: 100px;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 25px;
 }
 
-main div#center-bar div.estatisticas .box-info {
-    display: flex;
-}
-
-main div#center-bar div.estatisticas .box-info h1 {
-    color: orange;
-}
-
-main div#center-bar div.estatisticas .box-info h3 {
-    color: white;
-    font-size: 15px;
-    padding: 30px 10px;
-}
-
-main div#center-bar.active {
-    display: block;
-}
-
-main div#center-bar h1 {
-    font-size: 80px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-}
-
-main div#center-bar div.sep-hor {
-    width: 70px;
-    height: 3px;
-    background-color: white;
-    margin-top: 5px;
-    margin-bottom: 20px
-}
-
-main div#center-bar h2 {
-    font-size: 15px;
-    color: gray;
-    text-align: justify;
-}
-
-main div.right-bar {
-    position: relative;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 80px 50px 0px 50px;
-    height: fit-content;
-}
-
-main div.right-bar img.active {
-    filter: grayscale(0%) brightness(1);
-}
-
-main div.right-bar img {
-    width: 45px;
-    height: 45px;
-    margin-top: 15px;
-    transition: .5s;
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 5px;
-    border: 1px solid orange;
-    filter: grayscale(100%) brightness(.5);
-}
-
-main div.right-bar img:hover {
-    filter: grayscale(0%) brightness(1);
-}
-
-main div.center-2 div.grid-skills {
-    display: grid;
-    grid-template-columns: 150px 150px 150px;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    font-size: 10px;
-}
-
-main div.center-2 div.grid-skills img {
-    width: 80px;
-    transition: .5s;
-    filter: grayscale(100%) brightness(.5);
-    cursor: help;
-}
-
-main div.center-2 div.grid-skills h3 {
-    padding-top: 10px;
-}
-
-main div.center-2 div.grid-skills img:hover {
-    filter: grayscale(100%) brightness(1);
-}
-
-main div.center-2 div.tooltip-skill {
-    width: 100%px;
-    height: 90px;
-    margin-top: 40px;
-    font-size: 20px;
-    color: white;
-    text-align: center;
-}
-
-main div.center-3 div.project {
-    display: grid;
-    grid-template-columns: 260px 260px 260px;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-main div.center-3 div.work-card {
-    width: 250px;
-    height: 350px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    transition: .5s;
-    opacity: .7;
-}
-
-main div.center-3 div.work-card:hover {
-    transform: scale(1.03);
-    opacity: 1;
-}
-
-main div.center-3 div.project div.work-card div#site-view-1 {
-    border-radius: 10px 10px 0px 0px;
-    background: url('../_img/work-1.png') no-repeat -95px;
-    background-size: cover;
-    width: 250px;
-    height: 210px;
-}
-
-main div.center-3 div.project div.work-card div#site-view-2 {
-    border-radius: 10px 10px 0px 0px;
-    background: url('../_img/work-2.png') no-repeat -30px;
-    background-size: cover;
-    width: 250px;
-    height: 210px;
-}
-
-main div.center-3 div.project div.work-card div#site-view-3 {
-    border-radius: 10px 10px 0px 0px;
-    background: url('../_img/work-3.png') no-repeat -50px;
-    background-size: cover;
-    width: 250px;
-    height: 210px;
-}
-
-main div.center-3 div.project div.work-card h2#title-site {
-    padding: 10px;
-    color: gray;
-    text-align: center;
-}
-main div.center-3 div.project div.work-card h3#desc-site {
-    font-size: 15px;
-    text-align: center;
-    padding: 15px;
-}
-
-main div.center-3 div.project div.work-card div#tool-desc {
-    opacity: 0;
-    position: absolute;
-    height: 350px;
-    width: 250px;
-    background-color: rgba(0, 0, 0, 0.757);
-    border-radius: 10px;
-    transition: .5s;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-main div.center-3 div.project div.work-card div#tool-desc:hover {
-    opacity: 1;
-}
-
-a#git-btn {
-    height: 55px;
-    width: 55px;
-    margin-top: -150px;
-    border-radius: 50%;
-    border: none;
-    background: url(../_img/github.png) no-repeat 12px 11px;
+footer #social-media a {
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
     background-color: black;
-    cursor: pointer;
-}
-a#live-btn {
-    height: 55px;
-    width: 55px;
-    margin-top: -150px;
-    border-radius: 50%;
     border: none;
-    background: url(../_img/internet.png) no-repeat 12px 11px;
-    background-color: black;
-    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
 }
 
-main div.center-3 div.project div.work-card div#tool-desc div.desc {
-    position: absolute;
-    color: white;
-    font-size: 10px;
-    padding: 20px;
-    text-align: center;
+footer #social-media a:hover {
+    background-color: orange;
 }
 
-main div.center-3 div.project div.work-card div#tool-desc div.tag-css {
-    position: absolute;
-    bottom: 10px;
-    right: 5px;
-    height: 25px;
-    width: 75px;
-    border-radius: 5px;
-    background-color: blue;
-    display: flex;
-    padding-left: 10px;
-    align-items: center;
-    font-size: 10px;
-    color: white;
+footer #social-media a img {
+    height: 50%;
+    margin: 12px 13px;
 }
-main div.center-3 div.project div.work-card div#tool-desc div.tag-html {
-    position: absolute;
-    bottom: 10px;
-    right: 85px;
-    height: 25px;
-    width: 75px;
-    border-radius: 5px;
-    background-color: orangered;
-    display: flex;
-    padding-left: 10px;
-    align-items: center;
-    font-size: 10px;
-    color: white;
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
 }
-main div.center-3 div.project div.work-card div#tool-desc div.tag-js {
-    position: absolute;
-    bottom: 10px;
-    right: 165px;
-    height: 25px;
-    width: 75px;
-    border-radius: 5px;
-    background-color: rgb(202, 202, 4);
-    display: flex;
-    padding-left: 10px;
-    align-items: center;
-    font-size: 10px;
-    color: white;
+
+@media screen and (max-width: 1000px) {
+    section#main-bottom #show-content {
+        grid-template-columns: 310px 310px;
+    }
+
+    section#main-bottom #page-btn button {
+        width: 50px;
+        height: 50px;
+    }
 }
-main div.center-3 div.project div.work-card div#tool-desc div.tag-version {
-    height: 25px;
-    width: 30px;
-    position: absolute;
-    border-radius: 0px 5px 5px 0px;
-    right: 0px;
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+@media screen and (max-width: 700px) {
+    section#main-top #presentation #my-name {
+        margin-left: 10px;
+    }
+
+    section#main-bottom #show-content {
+        grid-template-columns: 310px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section#main-top #presentation #my-name {
+        margin-top: 120px;
+        margin-left: -100px;
+    }
+
+    section#main-middle #about-me {
+        padding: 30px;
+    }
 }
