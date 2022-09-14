@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="_css/style.css" class="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <title>Portfolio | Felipe Silva</title>
 </head>
 
@@ -51,7 +52,7 @@
                 <h4 class="btn orange">Sistemas Web</h4>
                 <h4 class="btn orange">Projetos Mobile</h4>
             </div>
-            <div id="show-content">
+            <!--<div class="show-content" id="show-content">
                 <div class="card-box">
                     <img src="_img/no-img.png">
                     <h3>Site</h3>
@@ -70,10 +71,23 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et minima necessitatibus ratione.</p>
                     <button>Detalhes</button>
                 </div>
-            </div>
-            <div id="page-btn">
-                <button>&lt;</button>
-                <button>&gt;</button>
+                <div class="card-box">
+                    <img src="_img/no-img.png">
+                    <h3>Mobile</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et minima necessitatibus ratione.</p>
+                    <button>Detalhes</button>
+                </div>
+            </div> -->
+            <div class="rewind" id="rewind">
+                <div>
+                    <div class="card-box">
+                        <img src="_img/no-img.png">
+                        <h3>Site</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et minima necessitatibus ratione.
+                        </p>
+                        <button>Detalhes</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -91,6 +105,28 @@
         </div>
         <h1>flpsilvatj@gmail.com</h1>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+        var slider = tns({
+            "container": "#rewind",
+            "items": 3,
+            "gutter": 10,
+            "fixedWidth": 310,
+            "rewind": true,
+            "autoplayButtonOutput": false,
+            "speed": 400,
+            "controlsPosition": "bottom",
+            "controlsText": ["<", ">"],
+            "nav": false,
+            "autoplay": true,
+            "responsive": {
+                "500": {
+                    "items": 1
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
